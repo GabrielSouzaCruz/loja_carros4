@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.main-header {
+    margin-bottom: 30px; 
+    display: grid; 
+    grid-template-columns: auto auto; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo-title {
+    display: grid; 
+    grid-template-columns: auto 1fr; 
+    align-items: center;
+    gap: 15px; 
+}
+
+.main-title {
+    color: #111;
+    margin: 0; 
+    font-size: 2em; 
+}
+
+.site-logo {
+    width: 80px; 
+    height: 80px; 
+    object-fit: contain; 
+    border-radius: 50%; 
+    background-color: #000; 
+    padding: 5px; 
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid; 
+    grid-auto-flow: column; 
+    gap: 10px; 
+}
+
+.main-nav a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #7D9A01; 
+    color: #332200; 
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.main-nav a:hover {
+    background-color: #9EB900; 
+}
+
+.container-carros {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    max-width: 1020px; 
+    margin: 0 auto; 
+}
+
+.carro-item {
+    background-color: #111;
+    color: #fff;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    text-align: left;
+    display: flex; 
+    align-items: center; 
+}
+
+.carro-imagem {
+    width: 220px; 
+    height: auto; 
+    display: block;
+    margin-bottom: 0;
+    margin-right: 20px; 
+    border-radius: 4px; 
+}
+
+.carro-info {
+    flex: 1; 
+}
+
+.carro-item h2.preco {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.preco-valor {
+    color: #febe01;
+    font-weight: bold;
+}
+
+.carro-item .modelo {
+    color: #fff;
+    font-size: 1.125em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.carro-item .detalhes {
+    color: #b2b2b2;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.btn-proposta {
+    background-color: #febe01;
+    color: #332200;
+    border: none;
+    padding: 12px 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.btn-proposta:hover {
+    background-color: #e0ac00;
+}
+
+@media (max-width: 768px) { 
+    .main-header {
+        grid-template-columns: 1fr; 
+        justify-content: center; 
+        gap: 20px; 
+    }
+
+    .logo-title {
+        justify-self: center; 
+    }
+
+    .main-nav ul {
+        grid-auto-flow: row;
+        justify-items: center;
+    }
+
+    .main-nav a {
+        text-align: center;
+        width: 200px;
+    }
+}
+
+@media (max-width: 550px) { 
+    .carro-item {
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .carro-imagem {
+        width: 100%; 
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+}
